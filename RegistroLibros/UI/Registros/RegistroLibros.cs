@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace RegistroLibros.UI.Registros
 {
-    public partial class RegistroLibros : Form
+    public partial class registroLibros : Form
     {
-        public RegistroLibros()
+        public registroLibros()
         {
             InitializeComponent();
             LlenaComboBox();

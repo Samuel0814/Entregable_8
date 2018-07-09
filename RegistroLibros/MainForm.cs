@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RegistroLibros.UI.Consultas;
+using RegistroLibros.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,46 @@ namespace RegistroLibros
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void registroDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            registroLibros r = new registroLibros();
+            r.Show();
+        }
+
+        private void registrosDeTipoDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroTiposLibros r = new RegistroTiposLibros();
+            r.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir de la aplicacion?",
+                       "Consulta",
+                       MessageBoxButtons.YesNo,
+                       MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+            {
+                e.Cancel = true; //Cancela el cerrado del formulario
+            }
+        }
+
+        private void consultaDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaLibros c = new ConsultaLibros();
+            c.Show();
+        }
+
+        private void consultaDeTiposDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaTiposLibros c = new ConsultaTiposLibros();
+            c.Show();
         }
     }
 }

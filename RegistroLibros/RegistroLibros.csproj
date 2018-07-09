@@ -77,11 +77,11 @@
     <Compile Include="UI\Consultas\ConsultaTiposLibros.Designer.cs">
       <DependentUpon>ConsultaTiposLibros.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\RegistroLibros.cs">
+    <Compile Include="UI\Registros\registroLibros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\RegistroLibros.Designer.cs">
-      <DependentUpon>RegistroLibros.cs</DependentUpon>
+    <Compile Include="UI\Registros\registroLibros.Designer.cs">
+      <DependentUpon>registroLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\RegistroTiposLibros.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,8 @@
     <EmbeddedResource Include="UI\Consultas\ConsultaTiposLibros.resx">
       <DependentUpon>ConsultaTiposLibros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RegistroLibros.resx">
-      <DependentUpon>RegistroLibros.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\registroLibros.resx">
+      <DependentUpon>registroLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroTiposLibros.resx">
       <DependentUpon>RegistroTiposLibros.cs</DependentUpon>

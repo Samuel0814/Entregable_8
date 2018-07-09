@@ -1,6 +1,6 @@
 ﻿namespace RegistroLibros.UI.Registros
 {
-    partial class RegistroLibros
+    partial class registroLibros
     {
         /// <summary>
         /// Required designer variable.
