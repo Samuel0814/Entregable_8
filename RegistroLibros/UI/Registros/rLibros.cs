@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace RegistroLibros.UI.Registros
 {
-    public partial class registroLibros : Form
+    public partial class rLibros : Form
     {
-        public registroLibros()
+        public rLibros()
         {
             InitializeComponent();
             LlenaComboBox();
@@ -24,25 +24,21 @@ namespace RegistroLibros.UI.Registros
             Repositorio<Tipos> ArtRepositorio = new Repositorio<Tipos>(new Contexto());
 
             TipocomboBox.DataSource = ArtRepositorio.GetList(c => true);
-            TipocomboBox.ValueMember = "TiposID";
+            TipocomboBox.ValueMember = "TipoId";
             TipocomboBox.DisplayMember = "Descripcion";
 
         }
 
+
         private bool HayErrores()
         {
+
             bool HayErrores = false;
 
             if (String.IsNullOrWhiteSpace(DescripciontextBox.Text))
             {
                 MyerrorProvider.SetError(DescripciontextBox,
-                    "Debes digitar la descripcion del libro");
-                HayErrores = true;
-            }
-            if (String.IsNullOrWhiteSpace(SiglastextBox.Text))
-            {
-                MyerrorProvider.SetError(SiglastextBox,
-                    "Debes digitar las siglas del libro");
+                    "Debes digitar la descripcion ");
                 HayErrores = true;
             }
             return HayErrores;
@@ -57,7 +53,8 @@ namespace RegistroLibros.UI.Registros
             libros.Fecha = FechadateTimePicker.Value;
             libros.Descripcion = DescripciontextBox.Text;
             libros.Siglas = SiglastextBox.Text;
-            
+            libros.Tipo = TipocomboBox.Text;
+
             return libros;
         }
 
@@ -78,7 +75,7 @@ namespace RegistroLibros.UI.Registros
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void RegistroLibros_Load(object sender, EventArgs e)
+        private void rlibros_load(object sender, EventArgs e)
         {
             
         }
@@ -107,7 +104,12 @@ namespace RegistroLibros.UI.Registros
             libros = LlenaClase();
 
             if (LibroIDnumericUpDown.Value == 0)
+            {
                 Paso = BLL.LibrosBLL.Guardar(libros);
+                Tipos a = (Tipos)TipocomboBox.SelectedItem;
+                a.DescripcionLibro +=  DescripciontextBox.Text + "   ";
+                BLL.TipoBLL.Modificar(a);
+            }
             else
                 Paso = BLL.LibrosBLL.Modificar(LlenaClase());
 

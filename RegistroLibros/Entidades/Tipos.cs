@@ -10,11 +10,17 @@ namespace RegistroLibros.Entidades
     {
         [Key]
         public int TipoId { get; set; }
+
         public String Descripcion { get; set; }
+
+        public string DescripcionLibro { get; set; }
+
+
         public Tipos()
         {
             TipoId = 0;
             Descripcion = String.Empty;
+            DescripcionLibro = String.Empty;
         }
     }
 }

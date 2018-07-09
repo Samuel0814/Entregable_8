@@ -38,6 +38,7 @@ namespace RegistroLibros.UI.Registros
             tipos.TipoId = Convert.ToInt32(TipoIDnumericUpDown.Value);
             tipos.Descripcion =  DescripciontextBox.Text;
 
+
             return tipos;
         }
 

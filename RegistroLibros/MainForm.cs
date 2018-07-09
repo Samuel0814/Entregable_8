@@ -18,12 +18,6 @@ namespace RegistroLibros
             InitializeComponent();
         }
 
-        private void registroDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            registroLibros r = new registroLibros();
-            r.Show();
-        }
-
         private void registrosDeTipoDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegistroTiposLibros r = new RegistroTiposLibros();
@@ -56,6 +50,17 @@ namespace RegistroLibros
         {
             ConsultaTiposLibros c = new ConsultaTiposLibros();
             c.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registroDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rLibros r = new rLibros();
+            r.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace RegistroLibros.UI.Registros
 {
-    partial class registroLibros
+    partial class rLibros
     {
         /// <summary>
         /// Required designer variable.
@@ -224,7 +224,7 @@
             this.Controls.Add(this.LibroIDlabel);
             this.Name = "RegistroLibros";
             this.Text = "Registro de Libros";
-            this.Load += new System.EventHandler(this.RegistroLibros_Load);
+            this.Load += new System.EventHandler(this.rlibros_load);
             ((System.ComponentModel.ISupportInitialize)(this.LibroIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
