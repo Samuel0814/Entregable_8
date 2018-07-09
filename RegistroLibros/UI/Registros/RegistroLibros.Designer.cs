@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.LibroIDnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Nuevobutton = new System.Windows.Forms.Button();
             this.Descripcionlabel = new System.Windows.Forms.Label();
             this.Siglaslabel = new System.Windows.Forms.Label();
             this.LibroIDlabel = new System.Windows.Forms.Label();
@@ -42,8 +41,12 @@
             this.Tipolabel = new System.Windows.Forms.Label();
             this.TipocomboBox = new System.Windows.Forms.ComboBox();
             this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.LibroIDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // DescripciontextBox
@@ -73,30 +76,6 @@
             this.LibroIDnumericUpDown.Name = "LibroIDnumericUpDown";
             this.LibroIDnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.LibroIDnumericUpDown.TabIndex = 16;
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.Image = global::RegistroLibros.Properties.Resources.icons8_Save_All_32;
-            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(141, 246);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(83, 54);
-            this.Guardarbutton.TabIndex = 22;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Nuevobutton
-            // 
-            this.Nuevobutton.Image = global::RegistroLibros.Properties.Resources.icons8_Create_32;
-            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevobutton.Location = new System.Drawing.Point(15, 246);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(83, 54);
-            this.Nuevobutton.TabIndex = 21;
-            this.Nuevobutton.Text = "Nuevo";
-            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Nuevobutton.UseVisualStyleBackColor = true;
             // 
             // Descripcionlabel
             // 
@@ -178,6 +157,33 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = global::RegistroLibros.Properties.Resources.icons8_Save_All_32;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardarbutton.Location = new System.Drawing.Point(141, 246);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(83, 54);
+            this.Guardarbutton.TabIndex = 22;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = global::RegistroLibros.Properties.Resources.icons8_Create_32;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Nuevobutton.Location = new System.Drawing.Point(15, 246);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(83, 54);
+            this.Nuevobutton.TabIndex = 21;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Buscarbutton
             // 
@@ -191,6 +197,10 @@
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // MyerrorProvider
+            // 
+            this.MyerrorProvider.ContainerControl = this;
             // 
             // RegistroLibros
             // 
@@ -214,7 +224,9 @@
             this.Controls.Add(this.LibroIDlabel);
             this.Name = "RegistroLibros";
             this.Text = "Registro de Libros";
+            this.Load += new System.EventHandler(this.RegistroLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LibroIDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +248,6 @@
         private System.Windows.Forms.TextBox SiglastextBox;
         private System.Windows.Forms.Label Tipolabel;
         private System.Windows.Forms.ComboBox TipocomboBox;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
     }
 }
