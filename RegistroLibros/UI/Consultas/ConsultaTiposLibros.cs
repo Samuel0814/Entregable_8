@@ -21,12 +21,8 @@ namespace RegistroLibros.UI.Consultas
         private void Llenar()
         {
             FiltrocomboBox.Items.Insert(0, "ID");
-            FiltrocomboBox.Items.Insert(1, "Ganancia");
-            FiltrocomboBox.Items.Insert(2, "Nombre Articulo");
-            FiltrocomboBox.Items.Insert(3, "Precio");
-            FiltrocomboBox.Items.Insert(4, "Inventario:");
-            FiltrocomboBox.Items.Insert(5, "Costo");
-            FiltrocomboBox.Items.Insert(6, "Todo");
+            FiltrocomboBox.Items.Insert(1, "Descripcion");
+            FiltrocomboBox.Items.Insert(2, "Todo");
         }
 
         private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,7 +54,7 @@ namespace RegistroLibros.UI.Consultas
                     id = Convert.ToInt32(CriteriotextBox.Text);
                     filtro = a => a.TipoId == id;
                     break;
-                case 1://Filtrando por la Fecha .
+                case 1://Filtrando por la descripcion .
                     filtro = a => a.Descripcion.Contains(CriteriotextBox.Text);
                     break;
                 case 2://Todo
