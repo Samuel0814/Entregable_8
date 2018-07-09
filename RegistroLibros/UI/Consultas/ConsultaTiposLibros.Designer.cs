@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
             this.Criteriolabel = new System.Windows.Forms.Label();
             this.Filtrolabel = new System.Windows.Forms.Label();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.Buscatbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -42,22 +43,10 @@
             // ConsultadataGridView
             // 
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultadataGridView.Location = new System.Drawing.Point(12, 63);
+            this.ConsultadataGridView.Location = new System.Drawing.Point(12, 76);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
-            this.ConsultadataGridView.Size = new System.Drawing.Size(660, 302);
+            this.ConsultadataGridView.Size = new System.Drawing.Size(712, 289);
             this.ConsultadataGridView.TabIndex = 14;
-            // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.Image = global::RegistroLibros.Properties.Resources.icons8_Print_32;
-            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Imprimirbutton.Location = new System.Drawing.Point(12, 384);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(89, 48);
-            this.Imprimirbutton.TabIndex = 13;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -65,7 +54,7 @@
             this.groupBox1.Controls.Add(this.FiltrocomboBox);
             this.groupBox1.Controls.Add(this.Criteriolabel);
             this.groupBox1.Controls.Add(this.Filtrolabel);
-            this.groupBox1.Location = new System.Drawing.Point(36, 11);
+            this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(611, 46);
             this.groupBox1.TabIndex = 12;
@@ -85,6 +74,7 @@
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(155, 21);
             this.FiltrocomboBox.TabIndex = 2;
+            this.FiltrocomboBox.SelectedIndexChanged += new System.EventHandler(this.FiltrocomboBox_SelectedIndexChanged);
             // 
             // Criteriolabel
             // 
@@ -104,16 +94,43 @@
             this.Filtrolabel.TabIndex = 0;
             this.Filtrolabel.Text = "Filtro";
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.Image = global::RegistroLibros.Properties.Resources.icons8_Print_32;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Imprimirbutton.Location = new System.Drawing.Point(12, 384);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(89, 48);
+            this.Imprimirbutton.TabIndex = 13;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            // 
+            // Buscatbutton
+            // 
+            this.Buscatbutton.Image = global::RegistroLibros.Properties.Resources.icons8_Search_Property_32;
+            this.Buscatbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscatbutton.Location = new System.Drawing.Point(649, 12);
+            this.Buscatbutton.Name = "Buscatbutton";
+            this.Buscatbutton.Size = new System.Drawing.Size(75, 58);
+            this.Buscatbutton.TabIndex = 15;
+            this.Buscatbutton.Text = "Buscar";
+            this.Buscatbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscatbutton.UseVisualStyleBackColor = true;
+            this.Buscatbutton.Click += new System.EventHandler(this.Buscatbutton_Click);
+            // 
             // ConsultaTiposLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 443);
+            this.ClientSize = new System.Drawing.Size(736, 443);
+            this.Controls.Add(this.Buscatbutton);
             this.Controls.Add(this.ConsultadataGridView);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultaTiposLibros";
             this.Text = "ConsultaTiposLibros";
+            this.Load += new System.EventHandler(this.ConsultaTiposLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -130,5 +147,6 @@
         private System.Windows.Forms.ComboBox FiltrocomboBox;
         private System.Windows.Forms.Label Criteriolabel;
         private System.Windows.Forms.Label Filtrolabel;
+        private System.Windows.Forms.Button Buscatbutton;
     }
 }
