@@ -11,6 +11,8 @@ namespace RegistroLibros.DAL
     {
         public DbSet<Libros> Libros { get; set; }
 
+        public DbSet<Tipos> Tipos { get; set; }
+
         public Contexto() : base("ConStr")
         {
         }

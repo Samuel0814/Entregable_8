@@ -51,8 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\LibrosBLL.cs" />
+    <Compile Include="BLL\TipoBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Libros.cs" />
+    <Compile Include="Entidades\Tipos.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,11 +69,23 @@
     <Compile Include="UI\Consultas\ConsultaLibros.Designer.cs">
       <DependentUpon>ConsultaLibros.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\ConsultaTiposLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaTiposLibros.Designer.cs">
+      <DependentUpon>ConsultaTiposLibros.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RegistroLibros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Registros\RegistroLibros.Designer.cs">
       <DependentUpon>RegistroLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\RegistroTiposLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RegistroTiposLibros.Designer.cs">
+      <DependentUpon>RegistroTiposLibros.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,7 +95,20 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\ConsultaLibros.resx">
+      <DependentUpon>ConsultaLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ConsultaTiposLibros.resx">
+      <DependentUpon>ConsultaTiposLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistroLibros.resx">
+      <DependentUpon>RegistroLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistroTiposLibros.resx">
+      <DependentUpon>RegistroTiposLibros.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -99,6 +126,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\Entregable8Db.sql" />
+    <None Include="Resources\icons8_Print_32.png" />
+    <None Include="Resources\icons8_Create_32.png" />
+    <None Include="Resources\icons8_Delete_File_32.png" />
+    <None Include="Resources\icons8_Search_Property_32.png" />
+    <None Include="Resources\icons8_Save_All_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

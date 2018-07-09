@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace RegistroLibros.BLL
 {
-    public class LibrosBLL
+    public class TipoBLL
     {
-        public static bool Guardar(Libros libro)
+        public static bool Guardar(Tipos tipos)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                if (contexto.Libros.Add(libro) != null)
+                if (contexto.Tipos.Add(tipos) != null)
                 {
                     contexto.SaveChanges();
                     paso = true;
@@ -32,14 +32,14 @@ namespace RegistroLibros.BLL
             return paso;
         }
 
-        public static bool Modificar(Libros libro)
+        public static bool Modificar(Tipos tipos)
         {
             bool paso = false;
 
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Entry(libro).State = EntityState.Modified;
+                contexto.Entry(tipos).State = EntityState.Modified;
                 if (contexto.SaveChanges() > 0)
                 {
                     paso = true;
@@ -48,7 +48,7 @@ namespace RegistroLibros.BLL
             }
             catch (Exception)
             {
-                MessageBox.Show("El libro no se ha modificado");
+                MessageBox.Show("El tipo de libro no se ha modificado");
             }
             return paso;
         }
@@ -60,9 +60,9 @@ namespace RegistroLibros.BLL
             Contexto contexto = new Contexto();
             try
             {
-                Libros libros = contexto.Libros.Find(id);
+                Tipos tipos = contexto.Tipos.Find(id);
 
-                contexto.Libros.Remove(libros);
+                contexto.Tipos.Remove(tipos);
 
                 if (contexto.SaveChanges() > 0)
                 {
@@ -77,36 +77,36 @@ namespace RegistroLibros.BLL
             return paso;
         }
 
-        public static Libros Buscar(int id)
+        public static Tipos Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Libros libros = new Libros();
+            Tipos tipos = new Tipos();
             try
             {
-                libros = contexto.Libros.Find(id);
+                tipos = contexto.Tipos.Find(id);
                 contexto.Dispose();
             }
             catch (Exception)
             {
-                MessageBox.Show("No se encuentran libros registrados");
+                MessageBox.Show("No se encuentran tipos de libros registrados");
             }
-            return libros;
+            return tipos;
         }
 
-        public static List<Libros> GetList(Expression<Func<Libros, bool>> expression)
+        public static List<Tipos> GetList(Expression<Func<Tipos, bool>> expression)
         {
-            List<Libros> libros = new List<Libros>();
+            List<Tipos> tipos = new List<Tipos>();
             Contexto contexto = new Contexto();
             try
             {
-                libros = contexto.Libros.Where(expression).ToList();
+                tipos = contexto.Tipos.Where(expression).ToList();
                 contexto.Dispose();
             }
             catch (Exception)
             {
-                MessageBox.Show("No se encuentran libros registrados");
+                MessageBox.Show("No se encuentran tipos de libros registrados");
             }
-            return libros;
+            return tipos;
         }
     }
 }

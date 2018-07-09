@@ -1,6 +1,6 @@
 ﻿namespace RegistroLibros.UI.Consultas
 {
-    partial class ConsultaLibros
+    partial class ConsultaTiposLibros
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Hastalabel = new System.Windows.Forms.Label();
-            this.Desdelabel = new System.Windows.Forms.Label();
-            this.Rangolabel = new System.Windows.Forms.Label();
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
@@ -42,79 +36,22 @@
             this.Criteriolabel = new System.Windows.Forms.Label();
             this.Filtrolabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
-            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ConsultadataGridView
             // 
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultadataGridView.Location = new System.Drawing.Point(12, 111);
+            this.ConsultadataGridView.Location = new System.Drawing.Point(12, 63);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
-            this.ConsultadataGridView.Size = new System.Drawing.Size(660, 255);
-            this.ConsultadataGridView.TabIndex = 16;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.HastadateTimePicker);
-            this.panel1.Controls.Add(this.DesdedateTimePicker);
-            this.panel1.Controls.Add(this.Hastalabel);
-            this.panel1.Controls.Add(this.Desdelabel);
-            this.panel1.Location = new System.Drawing.Point(213, 64);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 41);
-            this.panel1.TabIndex = 15;
-            // 
-            // HastadateTimePicker
-            // 
-            this.HastadateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HastadateTimePicker.Location = new System.Drawing.Point(238, 12);
-            this.HastadateTimePicker.Name = "HastadateTimePicker";
-            this.HastadateTimePicker.Size = new System.Drawing.Size(148, 20);
-            this.HastadateTimePicker.TabIndex = 3;
-            // 
-            // DesdedateTimePicker
-            // 
-            this.DesdedateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdedateTimePicker.Location = new System.Drawing.Point(60, 11);
-            this.DesdedateTimePicker.Name = "DesdedateTimePicker";
-            this.DesdedateTimePicker.Size = new System.Drawing.Size(131, 20);
-            this.DesdedateTimePicker.TabIndex = 2;
-            // 
-            // Hastalabel
-            // 
-            this.Hastalabel.AutoSize = true;
-            this.Hastalabel.Location = new System.Drawing.Point(197, 13);
-            this.Hastalabel.Name = "Hastalabel";
-            this.Hastalabel.Size = new System.Drawing.Size(35, 13);
-            this.Hastalabel.TabIndex = 1;
-            this.Hastalabel.Text = "Hasta";
-            // 
-            // Desdelabel
-            // 
-            this.Desdelabel.AutoSize = true;
-            this.Desdelabel.Location = new System.Drawing.Point(16, 13);
-            this.Desdelabel.Name = "Desdelabel";
-            this.Desdelabel.Size = new System.Drawing.Size(38, 13);
-            this.Desdelabel.TabIndex = 0;
-            this.Desdelabel.Text = "Desde";
-            // 
-            // Rangolabel
-            // 
-            this.Rangolabel.AutoSize = true;
-            this.Rangolabel.Location = new System.Drawing.Point(59, 82);
-            this.Rangolabel.Name = "Rangolabel";
-            this.Rangolabel.Size = new System.Drawing.Size(148, 13);
-            this.Rangolabel.TabIndex = 14;
-            this.Rangolabel.Text = "Filtrando por Rango de Fecha";
+            this.ConsultadataGridView.Size = new System.Drawing.Size(660, 302);
+            this.ConsultadataGridView.TabIndex = 14;
             // 
             // Imprimirbutton
             // 
             this.Imprimirbutton.Image = global::RegistroLibros.Properties.Resources.icons8_Print_32;
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Imprimirbutton.Location = new System.Drawing.Point(12, 383);
+            this.Imprimirbutton.Location = new System.Drawing.Point(12, 384);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(89, 48);
             this.Imprimirbutton.TabIndex = 13;
@@ -128,7 +65,7 @@
             this.groupBox1.Controls.Add(this.FiltrocomboBox);
             this.groupBox1.Controls.Add(this.Criteriolabel);
             this.groupBox1.Controls.Add(this.Filtrolabel);
-            this.groupBox1.Location = new System.Drawing.Point(34, 12);
+            this.groupBox1.Location = new System.Drawing.Point(36, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(611, 46);
             this.groupBox1.TabIndex = 12;
@@ -167,37 +104,26 @@
             this.Filtrolabel.TabIndex = 0;
             this.Filtrolabel.Text = "Filtro";
             // 
-            // ConsultaLibros
+            // ConsultaTiposLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 443);
             this.Controls.Add(this.ConsultadataGridView);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Rangolabel);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ConsultaLibros";
-            this.Text = "ConsultaLibros";
+            this.Name = "ConsultaTiposLibros";
+            this.Text = "ConsultaTiposLibros";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView ConsultadataGridView;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker HastadateTimePicker;
-        private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
-        private System.Windows.Forms.Label Hastalabel;
-        private System.Windows.Forms.Label Desdelabel;
-        private System.Windows.Forms.Label Rangolabel;
         private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox CriteriotextBox;

@@ -7,18 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace RegistroLibros.UI.Registros
+namespace RegistroLibros.UI.Consultas
 {
-    public partial class RegistroLibros : Form
+    public partial class ConsultaTiposLibros : Form
     {
-        public RegistroLibros()
+        public ConsultaTiposLibros()
         {
             InitializeComponent();
-        }
-
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

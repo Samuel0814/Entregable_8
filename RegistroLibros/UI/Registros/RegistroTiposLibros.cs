@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace RegistroLibros.UI.Registros
 {
-    public partial class RegistroLibros : Form
+    public partial class RegistroTiposLibros : Form
     {
-        public RegistroLibros()
+        public RegistroTiposLibros()
         {
             InitializeComponent();
-        }
-
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
